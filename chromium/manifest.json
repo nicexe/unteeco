@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "unteeco",
+  "version": "1.0.0",
+  "description": "Replace t.co tracking links on x.com / twitter.com with the original URLs, without contacting t.co.",
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*", "https://mobile.twitter.com/*"],
+      "js": ["unteeco.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

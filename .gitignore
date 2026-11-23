@@ -1,0 +1,42 @@
+# AI assistant files / directories
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.claude.json
+.mcp.json
+.cursor/
+.cursorrules
+.windsurf/
+.windsurfrules
+.aider*
+.continue/
+.codeium/
+.github/copilot-instructions.md
+.gemini/
+GEMINI.md
+AGENTS.md
+.cline/
+.clinerules
+.roo/
+.roomodes
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+
+# Node / build output
+node_modules/
+*.log
+*.zip
+*.xpi
+*.crx
+*.pem
+web-ext-artifacts/
+
+# Env / secrets
+.env
+.env.*
