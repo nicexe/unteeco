@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Replace t.co tracking links on x.com / twitter.com with the original URLs.",
+  "description": "Replace t.co tracking links on x.com / twitter.com with the original URLs, without contacting t.co.",
   "scripts": {
-    "build": "node build.mjs",
-    "icons": "node scripts/make-icons.mjs"
+    "build": "node build.mjs"
   },
   "devDependencies": {
     "@resvg/resvg-js": "^2.6.2"

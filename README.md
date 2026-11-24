@@ -13,21 +13,32 @@ anchor (tweet text, link cards, profile links...). As a fallback it also uses th
 full URL X puts in the link's `title` tooltip, and shares it with other anchors
 for the same `t.co` id (e.g. the preview card). No request is ever made to `t.co`.
 
-## Layout
+## Build
 
-| Path | What |
+Only the sources are committed; everything else is generated into `dist/`.
+
+```
+pnpm install
+pnpm build
+```
+
+| Source | Used for |
 | --- | --- |
-| `src/core.js` | the only real source file |
-| `build.mjs` | `pnpm build` copies the core into the three targets below and embeds the icon in the userscript header |
-| `assets/unteeco.svg` | icon source; `pnpm icons` rasterizes it to `assets/icon-64.png` and `{chromium,firefox}/icons/*.png` (needs `pnpm install` first) |
-| `userscript/unteeco.user.js` | Tampermonkey / Violentmonkey / Greasemonkey (Chromium + Firefox) |
-| `chromium/` | MV3 extension (Chrome, Edge, Brave...) |
-| `firefox/` | MV3 extension (Firefox 128+) |
+| `src/core.js` | the script itself (the only real code) |
+| `assets/unteeco.svg` | icon, rasterized to PNGs |
+| `package.json` | version and description |
+| `build.mjs` | generates the manifests, userscript header and icons |
+
+| Output | What |
+| --- | --- |
+| `dist/userscript/unteeco.user.js` | Tampermonkey / Violentmonkey / Greasemonkey (Chromium + Firefox) |
+| `dist/chromium/` | MV3 extension (Chrome, Edge, Brave...) |
+| `dist/firefox/` | MV3 extension (Firefox 128+) |
 
 ## Install
 
-- **Userscript**: open `userscript/unteeco.user.js` in your userscript manager.
+- **Userscript**: open `dist/userscript/unteeco.user.js` in your userscript manager.
   It uses `@grant none` so it runs in the page context.
-- **Chromium**: `chrome://extensions` -> Developer mode -> Load unpacked -> `chromium/`.
+- **Chromium**: `chrome://extensions` -> Developer mode -> Load unpacked -> `dist/chromium/`.
 - **Firefox**: `about:debugging#/runtime/this-firefox` -> Load Temporary Add-on ->
-  `firefox/manifest.json`. (For permanent install, sign it via AMO.)
+  `dist/firefox/manifest.json`. (For permanent install, sign it via AMO.)

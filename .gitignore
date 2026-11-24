@@ -30,6 +30,7 @@ desktop.ini
 
 # Node / build output
 node_modules/
+dist/
 *.log
 *.zip
 *.xpi
