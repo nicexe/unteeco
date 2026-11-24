@@ -15,14 +15,17 @@ for the same `t.co` id (e.g. the preview card). No request is ever made to `t.co
 
 ## Install
 
-- **Userscript** (Violentmonkey, Tampermonkey, Greasemonkey): open
-  <https://github.com/nicexe/unteeco/releases/latest/download/unteeco.user.js>.
-  It updates itself from GitHub releases (`@updateURL` / `@downloadURL`) and runs in the page
-  context (`@grant none`).
-- **Chromium** (Chrome, Edge, Brave...): Chrome Web Store, or `chrome://extensions` -> Developer
-  mode -> Load unpacked -> `dist/chromium/` from a local build.
-- **Firefox** (128+): addons.mozilla.org, or `about:debugging#/runtime/this-firefox` -> Load
-  Temporary Add-on -> `dist/firefox/manifest.json` from a local build.
+| Platform | Install | Updates |
+| --- | --- | --- |
+| Userscript (Violentmonkey, Tampermonkey, Greasemonkey; Chromium and Firefox) | [**Install latest release**](https://github.com/nicexe/unteeco/releases/latest/download/unteeco.user.js) | Automatic, from GitHub releases |
+| Chromium (Chrome, Edge, Brave...) | Chrome Web Store: coming soon | Automatic, via the store |
+| Firefox (128+) | addons.mozilla.org: coming soon | Automatic, via AMO |
+
+The userscript checks for new versions through `@updateURL` / `@downloadURL` and runs in the page
+context (`@grant none`). Until the store listings exist, the addons can be loaded from a local
+build (see [Build](#build)): in Chromium use `chrome://extensions` -> Developer mode -> Load
+unpacked -> `dist/chromium/`; in Firefox use `about:debugging#/runtime/this-firefox` -> Load
+Temporary Add-on -> `dist/firefox/manifest.json`. Locally loaded addons do not auto-update.
 
 ## Build
 
