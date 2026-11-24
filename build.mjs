@@ -3,12 +3,14 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const core = readFileSync(new URL('./src/core.js', import.meta.url), 'utf8');
+const icon = readFileSync(new URL('./assets/icon-64.png', import.meta.url)).toString('base64');
 
 const header = `// ==UserScript==
 // @name         unteeco - replace t.co links with the original URLs
 // @namespace    https://github.com/unteeco
 // @version      1.0.0
 // @description  Rewrites t.co tracking links on x.com / twitter.com to their real destination using data X already ships, so t.co is never contacted.
+// @icon         data:image/png;base64,${icon}
 // @match        https://x.com/*
 // @match        https://twitter.com/*
 // @match        https://mobile.twitter.com/*

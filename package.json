@@ -1,0 +1,14 @@
+{
+  "name": "unteeco",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Replace t.co tracking links on x.com / twitter.com with the original URLs.",
+  "scripts": {
+    "build": "node build.mjs",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2"
+  }
+}

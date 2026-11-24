@@ -18,7 +18,8 @@ for the same `t.co` id (e.g. the preview card). No request is ever made to `t.co
 | Path | What |
 | --- | --- |
 | `src/core.js` | the only real source file |
-| `build.mjs` | `node build.mjs` copies the core into the three targets below |
+| `build.mjs` | `pnpm build` copies the core into the three targets below and embeds the icon in the userscript header |
+| `assets/unteeco.svg` | icon source; `pnpm icons` rasterizes it to `assets/icon-64.png` and `{chromium,firefox}/icons/*.png` (needs `pnpm install` first) |
 | `userscript/unteeco.user.js` | Tampermonkey / Violentmonkey / Greasemonkey (Chromium + Firefox) |
 | `chromium/` | MV3 extension (Chrome, Edge, Brave...) |
 | `firefox/` | MV3 extension (Firefox 128+) |
