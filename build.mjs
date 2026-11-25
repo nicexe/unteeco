@@ -113,8 +113,10 @@ for (const [name, m] of Object.entries(manifests)) {
 
   for (const [path, data] of Object.entries(files)) write(`dist/${name}/${path}`, data);
 
-  // Fixed mtime so the same sources always produce the same zip.
-  const zip = zipSync(files, { level: 9, mtime: new Date(Date.UTC(2000, 0, 1)) });
+  // Fixed mtime so the same sources always produce the same zip. fflate writes
+  // it as local time, so build it from local components (not Date.UTC) to make
+  // the zip identical regardless of the machine's timezone.
+  const zip = zipSync(files, { level: 9, mtime: new Date(2000, 0, 1) });
   write(`dist/release/unteeco-${name}-${pkg.version}.zip`, zip);
 }
 
