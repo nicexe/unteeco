@@ -15,11 +15,11 @@ for the same `t.co` id (e.g. the preview card). No request is ever made to `t.co
 
 ## Install
 
-| Platform | Install | Updates |
-| --- | --- | --- |
-| Userscript (Violentmonkey, Tampermonkey, Greasemonkey; Chromium and Firefox) | [**Install latest release**](https://github.com/nicexe/unteeco/releases/latest/download/unteeco.user.js) | Automatic, from GitHub releases |
-| Chromium (Chrome, Edge, Brave...) | Chrome Web Store: coming soon | Automatic, via the store |
-| Firefox (128+) | addons.mozilla.org: coming soon | Automatic, via AMO |
+|  | Platform | Install | Updates |
+| --- | --- | --- | --- |
+| <img src="https://raw.githubusercontent.com/wiki/OpenUserJS/OpenUserJS.org/images/greasemonkey_icon.min.svg?sanitize=true" alt="Userscript" width="20" height="20"> | Userscript (Violentmonkey, Tampermonkey, Greasemonkey; Chromium and Firefox) | [**Install latest release**](https://github.com/nicexe/unteeco/releases/latest/download/unteeco.user.js) | Automatic, from GitHub releases |
+| <img src="https://raw.githubusercontent.com/chromium/chromium/refs/heads/main/chrome/app/theme/chromium/product_logo.svg?sanitize=true" alt="Chromium" width="20" height="20"> | Chromium (Chrome, Edge, Brave...) | Chrome Web Store: coming soon | Automatic, via the store |
+| <img src="https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/main/browser/base/content/logos/firefox.svg?sanitize=true" alt="Firefox" width="20" height="20"> | Firefox (128+) | addons.mozilla.org: coming soon | Automatic, via AMO |
 
 The userscript checks for new versions through `@updateURL` / `@downloadURL` and runs in the page
 context (`@grant none`). Until the store listings exist, the addons can be loaded from a local
