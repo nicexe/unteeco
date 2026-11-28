@@ -19,13 +19,14 @@ for the same `t.co` id (e.g. the preview card). No request is ever made to `t.co
 | --- | --- | --- | --- |
 | <img src="https://raw.githubusercontent.com/wiki/OpenUserJS/OpenUserJS.org/images/greasemonkey_icon.min.svg?sanitize=true" alt="Userscript" width="20" height="20"> | Userscript (Violentmonkey, Tampermonkey, Greasemonkey; Chromium and Firefox) | [**Install latest release**](https://github.com/nicexe/unteeco/releases/latest/download/unteeco.user.js) | Automatic, from GitHub releases |
 | <img src="https://raw.githubusercontent.com/chromium/chromium/refs/heads/main/chrome/app/theme/chromium/product_logo.svg?sanitize=true" alt="Chromium" width="20" height="20"> | Chromium (Chrome, Edge, Brave...) | Chrome Web Store: coming soon | Automatic, via the store |
-| <img src="https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/main/browser/base/content/logos/firefox.svg?sanitize=true" alt="Firefox" width="20" height="20"> | Firefox (128+) | addons.mozilla.org: coming soon | Automatic, via AMO |
+| <img src="https://raw.githubusercontent.com/mozilla-firefox/firefox/refs/heads/main/browser/base/content/logos/firefox.svg?sanitize=true" alt="Firefox" width="20" height="20"> | Firefox (128+) | [**Install from addons.mozilla.org**](https://addons.mozilla.org/en-US/firefox/addon/unteeco/) | Automatic, via AMO |
 
 The userscript checks for new versions through `@updateURL` / `@downloadURL` and runs in the page
-context (`@grant none`). Until the store listings exist, the addons can be loaded from a local
-build (see [Build](#build)): in Chromium use `chrome://extensions` -> Developer mode -> Load
-unpacked -> `dist/chromium/`; in Firefox use `about:debugging#/runtime/this-firefox` -> Load
-Temporary Add-on -> `dist/firefox/manifest.json`. Locally loaded addons do not auto-update.
+context (`@grant none`). Until the Chrome Web Store listing exists, the Chromium addon can be
+loaded from a local build (see [Build](#build)): `chrome://extensions` -> Developer mode -> Load
+unpacked -> `dist/chromium/`. For development, a local Firefox build can be loaded with
+`about:debugging#/runtime/this-firefox` -> Load Temporary Add-on -> `dist/firefox/manifest.json`.
+Locally loaded addons do not auto-update.
 
 ## Build
 
